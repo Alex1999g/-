@@ -1,9 +1,8 @@
 @font-face {
 	font-family: 'Open Sans Light';
-	src: url('fonts/OpenSans-Light.eot');
-  src: local('Open Sans Light'), local('OpenSans-Light'),
-    url('fonts/OpenSans-Light.woff2') format('woff'),
-		url('fonts/OpenSans-Light.woff') format('woff');
+  src: local('OpenSans-Light'),
+    url('../fonts/OpenSans-Light.woff2') format('woff2'),
+		url('../fonts/OpenSans-Light.woff') format('woff');
 	font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -11,21 +10,19 @@
 
 @font-face {
 	font-family: 'Open Sans Regular';
-	src: url('fonts/OpenSans-Regular.eot');
-  src: local('Open Sans Regular'), local('OpenSans-Regular'),
-    url('fonts/OpenSans-Regular.woff2') format('woff'),
-		url('fonts/OpenSans-Regular.woff') format('woff');
-	font-weight: normal;
+  src: local('OpenSans-Regular'),
+    url('../fonts/OpenSans-Regular.woff2') format('woff2'),
+		url('../fonts/OpenSans-Regular.woff') format('woff');
+	font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
 	font-family: 'Open Sans Semibold';
-	src: url('OpenSans-SemiBold.eot');
-  src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'),
-    url('fonts/OpenSans-SemiBold.woff2') format('woff'),
-		url('fonts/OpenSans-SemiBold.woff') format('woff');
+  src: local('OpenSans-SemiBold'),
+    url('../fonts/OpenSans-SemiBold.woff2') format('woff2'),
+		url('../fonts/OpenSans-SemiBold.woff') format('woff');
 	font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -71,6 +68,8 @@ button {
 /* header*/
 .header {
   height: 80px;
+  border-bottom: 1px solid #c4c4c4;
+  background-color: white;
 }
 
 .nav {
@@ -104,6 +103,7 @@ button {
   background-image: url("../img/hero-back.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  border-bottom: 1px solid #c4c4c4;
 }
 
 .title-hero {
@@ -145,6 +145,10 @@ button {
 }
 
 /* section-services*/
+.section-services {
+  border-bottom: 1px solid #c4c4c4;
+}
+
 .title-services {
   margin-top: 87px;
   margin-bottom: 21px;
@@ -197,6 +201,9 @@ button {
 }
 
 /* section-articles*/
+.section-articles {
+  border-bottom: 1px solid #c4c4c4;
+}
 
 .title-articles {
   margin-top: 87px;
@@ -212,7 +219,8 @@ button {
 }
 
 .article {
-  min-height: 180px;
+  box-sizing: border-box;
+  min-height: 185px;
   max-width: 565px;
   border: 1px solid #E4E4E4;
   border-radius: 5px;
@@ -224,6 +232,7 @@ button {
 }
 
 .articles-img {
+  font-size: 0;
   background-size: cover;
   background-origin: border-box;
 }
@@ -239,6 +248,7 @@ button {
 }
 
 .div-image {
+  font-size: 0;
   max-width: 170px;
   min-height: 100%;
 }
@@ -257,6 +267,9 @@ button {
 }
 
 /* section-clients */
+.section-clients {
+  border-bottom: 1px solid #c4c4c4;
+}
 
 .title-clients {
   margin-top: 87px;
@@ -310,6 +323,10 @@ button {
 }
 
 /* section-contacts*/
+.section-contacts {
+  border-bottom: 1px solid #c4c4c4;
+}
+
 .title-contacts {
   margin-bottom: 109px;
   margin-top: 87px;
@@ -349,6 +366,10 @@ button {
   line-height: 25px;
 }
 /* section-join-us*/
+.section-join-us {
+  border-bottom: 1px solid #c4c4c4;
+}
+
 .title-join-us {
   margin-top: 87px;
   margin-bottom: 22px;
@@ -438,7 +459,6 @@ button {
 .footer {
   height: 134px;
   padding-top: 45px;
-  padding-bottom: 45px;
 }
 
 .footer-logo {
