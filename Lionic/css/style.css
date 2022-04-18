@@ -86,13 +86,78 @@ button {
 
 .header-item-link {
   font-family: "Open Sans Semibold", sans-serif;
+  position: relative;
+}
+
+.header-item-link:focus {
+  outline-offset: 2px;
+  outline: 1px solid #71A7E2;
+}
+
+.header-item-link:hover {
+  outline: none;
+  color: #71A7E2;
+}
+
+.header-item-link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #3172B9;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+}
+
+.header-item-link:active::after {
+  opacity: 1;
+}
+
+.header-item-link:active {
+  color: #3172B9;
 }
 
 .header-btn {
   padding: 15px 35px;
+  outline: none;
+  position: relative;
   color: white;
   background-color: #3172B9;
   font-family: "Open Sans Semibold", sans-serif;
+}
+
+.header-btn::after {
+  content: "";
+  position: absolute;
+  left: -5px;
+  right: -5px;
+  top: -5px;
+  bottom: -5px;
+  border: 1px solid #71A7E2;
+  border-radius: 3px;
+  opacity: 0;
+}
+
+.header-btn:focus::after {
+  opacity: 1;
+}
+
+.header-btn:hover {
+  outline: none;
+  background-color: #71A7E2;
+}
+
+.header-btn:hover::after {
+  opacity: 0;
+}
+
+.header-btn:active {
+  background-color: #0E3B6C;
+}
+
+.header-btn:active::after {
+  opacity: 0;
 }
 
 /* разметка section-hero */
@@ -122,6 +187,8 @@ button {
 }
 
 .btn-hero {
+  position: relative;
+  outline: none;
   padding: 15px 35px;
   border: none;
   background-color: #3172B9;
@@ -130,6 +197,34 @@ button {
   line-height: 20px;
   margin-bottom: 14px;
   font-family: "Open Sans Semibold", sans-serif;
+}
+
+.btn-hero::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  bottom: -5px;
+  right: -5px;
+  left: -5px;
+  border: 1px solid #71A7E2;
+  border-radius: 3px;
+  opacity: 0;
+}
+
+.btn-hero:focus::after {
+  opacity: 1;
+}
+
+.btn-hero:hover {
+  background-color: #71A7E2;
+}
+
+.btn-hero:hover::after {
+  opacity: 0;
+}
+
+.btn-hero:active {
+  background-color: #0E3B6C;
 }
 
 .commet {
@@ -162,6 +257,10 @@ button {
   margin-bottom: 160px;
 }
 
+.services-icon {
+  fill: #3172B9;
+}
+
 .services-desc {
   text-align: center;
   margin-bottom: 54px;
@@ -176,6 +275,23 @@ button {
   align-items: center;
   border: 1px solid #E4E4E4;
   border-radius: 5px;
+}
+
+.services-item-card:hover {
+  background-color: #3172B9;
+  border-color: #3172B9;
+}
+
+.services-item-card:hover .services-icon {
+  fill: white;
+}
+
+.services-item-card:hover .title-card {
+  color: white;
+}
+
+.services-item-card:hover .card-services-desc {
+  color: white;
 }
 
 .services-item-card:not(:nth-child(4n)) {
@@ -219,11 +335,64 @@ button {
 }
 
 .article {
+  outline: none;
   box-sizing: border-box;
   min-height: 185px;
   max-width: 565px;
   border: 1px solid #E4E4E4;
   border-radius: 5px;
+}
+
+.link-article {
+  outline: none;
+}
+
+.link-article:focus .articles-card-desc {
+  background-color: #3172B9;
+}
+
+.link-article:focus .articles-card-desc .time {
+ color: white;
+}
+
+.link-article:focus .articles-card-desc .title-articles-card {
+  color: white;
+}
+
+.link-article:focus .articles-card-desc .desc-articles-card {
+  color: white;
+}
+
+.link-article:hover .articles-card-desc {
+  background-color: #71A7E2;
+}
+
+.link-article:hover .articles-card-desc .time {
+ color: white;
+}
+
+.link-article:hover .articles-card-desc .title-articles-card {
+  color: white;
+}
+
+.link-article:hover .articles-card-desc .desc-articles-card {
+  color: white;
+}
+
+.link-article:active .articles-card-desc {
+  background-color: #0E3B6C;
+}
+
+.link-article:active .articles-card-desc .time {
+ color: white;
+}
+
+.link-article:active .articles-card-desc .title-articles-card {
+  color: white;
+}
+
+.link-article:active .articles-card-desc .desc-articles-card {
+  color: white;
 }
 
 .article:not(:nth-child(2n)) {
@@ -359,6 +528,44 @@ button {
   margin-bottom: 30px;
 }
 
+.tel-contacts {
+  outline: none;
+}
+
+.tel-contacts:focus {
+  outline-offset: 3px;
+  outline: 1px solid #71A7E2;
+}
+
+.tel-contacts:hover {
+  color: #71A7E2;
+  outline: none;
+}
+
+.tel-contacts:active {
+  color: #0E3B6C;
+  outline: none;
+}
+
+.mail-contacts {
+  outline: none;
+}
+
+.mail-contacts:focus {
+  outline-offset: 3px;
+  outline: 1px solid #71A7E2;
+}
+
+.mail-contacts:hover {
+  color: #71A7E2;
+  outline: none;
+}
+
+.mail-contacts:active {
+  color: #0E3B6C;
+  outline: none;
+}
+
 .contacts-desc {
   max-width: 214px;
   font-family: "Open Sans Regular", sans-serif;
@@ -408,6 +615,7 @@ button {
 }
 
 .input {
+  outline: none;
   width: 250px;
   height: 60px;
   border: 1px solid #DADADA;
@@ -417,13 +625,44 @@ button {
   padding: 15px 15px 10px 28px;
 }
 
+.input:focus {
+  background-color: rgba(113, 167, 226, 0.2);
+  border-color: #71A7E2;
+}
+
+.input:hover {
+  background-color: inherit;
+  border-color: #71A7E2;
+}
+
+.input:active {
+  background-color: inherit;
+  border-color: #0E3B6C;
+}
+
 .textarea {
+  outline: none;
   width: 100%;
   border: 1px solid #DADADA;
   border-radius: 50px;
   height: 100%;
   box-sizing: border-box;
   padding: 15px 15px 10px 28px;
+}
+
+.textarea:focus {
+  background-color: rgba(113, 167, 226, 0.2);
+  border-color: #71A7E2;
+}
+
+.textarea:hover {
+  background-color: inherit;
+  border-color: #71A7E2;
+}
+
+.textarea:active {
+  background-color: inherit;
+  border-color: #0E3B6C;
 }
 
 .input3,
@@ -442,6 +681,8 @@ button {
 }
 
 .btn-join-us {
+  position: relative;
+  outline: none;
   width: 230px;
   height: 60px;
   font-family: "Open Sans Semibold", sans-serif;
@@ -452,6 +693,38 @@ button {
   padding: 15px 35px;
   border-radius: 50px;
   margin-bottom: 9px;
+}
+
+.btn-join-us::after {
+  content: "";
+  position: absolute;
+  right: -5px;
+  left: -5px;
+  bottom: -5px;
+  top: -5px;
+  border: 1px solid #71A7E2;
+  border-radius: inherit;
+  opacity: 0;
+}
+
+.btn-join-us:focus::after {
+  opacity: 1;
+}
+
+.btn-join-us:hover {
+  background-color: #71A7E2;
+}
+
+.btn-join-us:hover::after {
+  opacity: 0;
+}
+
+.btn-join-us:active {
+  background-color: #0E3B6C;
+}
+
+.btn-join-us:active::after {
+  opacity: 0;
 }
 
 /* footer */
@@ -484,4 +757,48 @@ button {
 
 .footer-social:not(:last-child) {
   margin-right: 32px;
+}
+
+.social-link {
+  outline: none;
+}
+
+.icon-footer {
+  fill: black;
+}
+
+.social-link:focus {
+  outline-offset: 3px;
+  outline: 1px solid #71A7E2;
+}
+
+.social-link:hover svg {
+  fill: #71A7E2;
+}
+
+.social-link-mail:hover .social-footer {
+  fill: transparent;
+  stroke: #71A7E2;
+}
+
+.social-link:hover {
+  outline: none;
+}
+
+.social-link:active svg {
+  fill: #3172B9;
+}
+
+.social-link-mail:active .social-footer {
+  fill: transparent;
+  stroke: #3172B9;
+}
+
+.social-link:active {
+  outline: none;
+}
+
+.social-footer {
+  fill: transparent;
+  stroke: black;
 }
