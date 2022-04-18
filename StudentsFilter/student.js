@@ -6,6 +6,7 @@
         { name: 'Галина', surName: 'Фирсова', middleName: 'Павловна', birthday: new Date(1995, 10, 16), startYear: 2017, faculty: 'Программирование' },
         { name: 'Владимир', surName: 'Петров', middleName: 'Глебович', birthday: new Date(1993, 3, 29), startYear: 2017, faculty: 'Социологический' },
     ];
+    const container = document.querySelector('.container');
 
     function createFormAdded() {
         const form = document.createElement('form');
@@ -67,35 +68,69 @@
         console.log(studentsList);
     };
 
-    function createTableStudents(array) {
+    function createTableStudents(studentsList) {
         const table = document.createElement('table');
+        table.classList.add('table');
+        const caption = document.createElement('caption');
+        caption.classList.add('caption');
+        caption.textContent = 'Список студентов';
 
         const mainTr = document.createElement('tr');
+        mainTr.classList.add('tr');
         const nameTh = document.createElement('th');
+        nameTh.classList.add('th');
         nameTh.textContent = 'ФИО';
         const facultyTh = document.createElement('th');
+        facultyTh.classList.add('th');
         facultyTh.textContent = 'Факультет';
         const dateBithTh = document.createElement('th');
+        dateBithTh.classList.add('th')
         dateBithTh.textContent = 'Дата рождения';
         const yearStartTh = document.createElement('th');
+        yearStartTh.classList.add('th')
         yearStartTh.textContent = 'Год начала обучения';
 
         table.append(mainTr);
+        table.append(caption);
         mainTr.append(nameTh);
         mainTr.append(facultyTh);
         mainTr.append(dateBithTh);
         mainTr.append(yearStartTh);
+        container.append(table);
 
+        for (let i = 0; i < studentsList.length; i++) {
+            let obj = studentsList[i];
+            let value = Object.values(obj);
+            let tr = document.createElement('tr');
+            tr.classList.add('tr');
+            for (let j = 1; j <= 4; j++) {
+                let td = document.createElement('td');
+                td.classList.add('th');
+                if (j === 1) {
+                    td.textContent = `${value[1]} ${value[0]} ${value[2]}`;
+                    tr.append(td);
+                } else if (j === 2) {
+                    td.textContent = `${value[5]}`;
+                    tr.append(td);
+                } else if (j === 3) {
+                    let date = value[3];
+                    let year = date.getFullYear();
+                    let mounth = date.getMonth();
+                    let day = date.getDate();
+                    td.textContent = `${year}.${mounth}.${day}`;
+                    tr.append(td);
+                } else {
+                    td.textContent = `${value[4]}`;
+                    tr.append(td);
+                }
+            }
+            table.append(tr);
+        };
     };
 
-    document.addEventListener('DOMContentLoaded', (e) => {
-        
-        e.preventDefault();
-
-        const container = document.querySelector('.container');
-        container.append(createFormAdded().form);
-        createFormAdded().button.addEventListener('click', addedStudentTable);
-    });
+    container.append(createFormAdded().form);
+    createTableStudents(studentsList);
+    createFormAdded().button.addEventListener('click', addedStudentTable);
 })();
 
 // getDate - день месяца указанной даты
