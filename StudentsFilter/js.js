@@ -6,23 +6,23 @@ let listStudent = [
     { name: 'Галина', surName: 'Фирсова', middleName: 'Павловна', faculty: 'Социологический', bidthDay: new Date('1995.11.24'), startYeur: 2000 },
 ];
 
-function changeDate() {
-    for (let i = 0; i < listStudent.length; i++) {
-        let dateStudent = listStudent[i].bidthDay
-        let dd = dateStudent.getDate();
-        if (dd < 10) {
-            dd = '0' + dd;
-        };
-        let mm = dateStudent.getMonth() + 1; // месяц 1-12
-        if (mm < 10) {
-            mm = '0' + mm;
-        };
-        let gg = dateStudent.getFullYear();
-        let dateSt = dd + mm + gg;
-        console.log(dateSt);
-    }
-};
-changeDate();
+// function changeDate() {
+//     for (let i = 0; i < listStudent.length; i++) {
+//         let dateStudent = listStudent[i].bidthDay
+//         let dd = dateStudent.getDate();
+//         if (dd < 10) {
+//             dd = '0' + dd;
+//         };
+//         let mm = dateStudent.getMonth() + 1; // месяц 1-12
+//         if (mm < 10) {
+//             mm = '0' + mm;
+//         };
+//         let gg = dateStudent.getFullYear();
+//         let dateSt = dd + mm + gg;
+//         console.log(dateSt);
+//     }
+// };
+// changeDate();
 
 function createFormStudents() {
     const formSt = document.createElement('form');
@@ -211,11 +211,11 @@ function createFormFilter() {
     };
 };
 
-let formStudent = createFormStudents();
-let changeStudent = formStudent.formSt;
-let tableStudent = createTableStudents();
-let tableCreateBody = tableStudent.tableBody;
-let filterStudent = createFormFilter();
+let formStudent = createFormStudents(); //добавление нового студента
+let changeStudent = formStudent.formSt; // получение формы добавления студентов
+let tableStudent = createTableStudents(); // таблица со студентами
+let tableCreateBody = tableStudent.tableBody; // получение тела таблицы
+let filterStudent = createFormFilter(); // получение формы с фильтрами
 
 changeStudent.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -228,33 +228,33 @@ changeStudent.addEventListener('submit', (event) => {
     array.bidthDay = changeStudent.elements.year.value;
     array.startYeur = changeStudent.elements.startyear.value;
 
-    if (!changeStudent.elements.myname.value.trim()) {
-        alert ('Все поля обязательны для заполнения');
-        return false;
-    };
-    if (!changeStudent.elements.mysurname.value.trim()) {
-        alert ('Все поля обязательны для заполнения');
-        return false;
-    };
-    if (!changeStudent.elements.middlename.value.trim()) {
-        alert ('Все поля обязательны для заполнения');
-        return false;
-    };
-    if (!changeStudent.elements.year.value.trim()) {
-        alert ('Все поля обязательны для заполнения');
-        return false;
-    };
-    if (!changeStudent.elements.startyear.value.trim()) {
-        alert ('Все поля обязательны для заполнения');
-        return false;
-    };
-    if (!changeStudent.elements.faculty.value.trim()) {
-        alert ('Все поля обязательны для заполнения');
-        return false;
-    };
-    if (parseInt(changeStudent.elements.startyear.value) < 2000) {
-        return false;
-    }
+    // if (!changeStudent.elements.myname.value.trim()) {
+    //     alert ('Все поля обязательны для заполнения');
+    //     return false;
+    // };
+    // if (!changeStudent.elements.mysurname.value.trim()) {
+    //     alert ('Все поля обязательны для заполнения');
+    //     return false;
+    // };
+    // if (!changeStudent.elements.middlename.value.trim()) {
+    //     alert ('Все поля обязательны для заполнения');
+    //     return false;
+    // };
+    // if (!changeStudent.elements.year.value.trim()) {
+    //     alert ('Все поля обязательны для заполнения');
+    //     return false;
+    // };
+    // if (!changeStudent.elements.startyear.value.trim()) {
+    //     alert ('Все поля обязательны для заполнения');
+    //     return false;
+    // };
+    // if (!changeStudent.elements.faculty.value.trim()) {
+    //     alert ('Все поля обязательны для заполнения');
+    //     return false;
+    // };
+    // if (parseInt(changeStudent.elements.startyear.value) < 2000) {
+    //     return false;
+    // }
 
     while (tableCreateBody.firstChild) {
         tableCreateBody.removeChild(tableCreateBody.lastChild);
@@ -310,7 +310,7 @@ filterStudent.inputFiler.addEventListener('input', () => {
                         };
                 tableCreateBody.append(string);
             };
-});
+}); // фильтры
 
 filterStudent.inputFiler1.addEventListener('input', () => {
     while (tableCreateBody.firstChild) {
@@ -332,7 +332,7 @@ filterStudent.inputFiler1.addEventListener('input', () => {
                         };
                 tableCreateBody.append(string);
             };
-});
+}); фильтры
 
 container.append(formStudent.formSt);
 container.append(filterStudent.fielderFilter);

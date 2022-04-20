@@ -4,33 +4,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css../style.css">
+  <link rel="stylesheet" href="css/normilize.css">
+  <link rel="stylesheet" href="css/3D-style.css">
+  <link rel="stylesheet" href="css/3d_style_media.css">
   <title>Курсы по 3d-моделированию</title>
 </head>
 
 <body>
   <header class="header">
-    <div class="container">
-      <a href="#" class="header-logo-link">
+    <div class="container flex">
+      <a href="https://skillbox.ru/" target="_blank" class="header-logo-link">
         <img src="img/skillbox-black 1.svg" alt="Логотип Skillbox" class="header-logo">
       </a>
       <nav class="nav">
-        <ul class="nav-list">
+        <ul class="nav-list flex">
           <li class="nav-list-item">
-            <a href="#">Главная</a>
+            <a href="#main" class="nav-item-link">Главная</a>
           </li>
           <li class="nav-list-item">
-            <a href="#">
+            <a href="#advantage" class="nav-item-link">
               О нас
             </a>
           </li>
           <li class="nav-list-item">
-            <a href="#">
+            <a href="#teacher" class="nav-item-link">
               Преподаватели
             </a>
           </li>
           <li class="nav-list-item">
-            <a href="#">
+            <a href="#ourcources" class="nav-item-link">
               Курсы
             </a>
           </li>
@@ -39,8 +41,8 @@
     </div>
   </header>
   <main class="main">
-    <section class="section-hero">
-      <div class="container">
+    <section id="main" class="section-hero">
+      <div class="container container-hero">
         <div class="hero-information">
           <h1 class="hero-title">
             Курсы 3D моделирования
@@ -55,30 +57,32 @@
         </div>
       </div>
     </section>
-    <section class="section-advantage">
-      <div class="container">
-        <h2 class="advantage-title">
-          Преимущества обучения в Skillbox
-        </h2>
-        <p class="advantage-description">
-          Имеется спорная точка зрения, гласящая примерно следующее: акционеры крупнейших компаний, которые представляют
-          собой яркий пример континентально-европейского типа политической культуры, будут рассмотрены исключительно
-          в&nbsp;разрезе маркетинговых предпосылок.
-        </p>
-        <ul class="advantage-list">
-          <li class="advantage-list-item">
+    <section id="advantage" class="section-advantage">
+      <div class="container container-advantage">
+        <div class="advantage-block-desc">
+          <h2 class="advantage-title">
+            Преимущества обучения в Skillbox
+          </h2>
+          <p class="advantage-description">
+            Имеется спорная точка зрения, гласящая примерно следующее: акционеры крупнейших компаний, которые представляют
+            собой яркий пример континентально-европейского типа политической культуры, будут рассмотрены исключительно
+            в&nbsp;разрезе маркетинговых предпосылок.
+          </p>
+        </div>
+        <ul class="advantage-list flex">
+          <li class="advantage-list-item flex">
             <img src="img/прем1.svg" alt="" class="advantage-item-image">
             <p class="advantage-item-desc">
               Результат вашего обучения является самым важным для нас приоритетом
             </p>
           </li>
-          <li class="advantage-list-item">
+          <li class="advantage-list-item flex">
             <img src="img/прем2.svg" alt="" class="advantage-item-image">
             <p class="advantage-item-desc">
               Лично познакомитесь с&nbsp;одним из&nbsp;своих будущих преподавателей
             </p>
           </li>
-          <li class="advantage-list-item">
+          <li class="advantage-list-item flex">
             <img src="img/прем3.svg" alt="" class="advantage-item-image">
             <p class="advantage-item-desc">
               Значимость этих проблем очевидна, поэтому стоит всегда быть внимательным
@@ -87,7 +91,7 @@
         </ul>
       </div>
     </section>
-    <section class="section-teacher">
+    <section id="teacher" class="section-teacher">
       <div class="container">
         <h2 class="teacher-title">
           Преподаватели
@@ -98,7 +102,7 @@
               <source srcset="img/препод1-mobile.jpg" media="(max-width: 320px)">
               <source srcset="img/препод1-510.jpg" media="(max-width: 510px)">
               <source srcset="img/препод1-690.jpg" media="(max-width: 690px)">
-              <img src="img/Препод1-1100.jpg" alt="foto">
+              <img src="img/Препод1-1100.jpg" alt="foto" class="teacher-image-desktop">
             </picture>
             <strong class="teacher-name">
               Владимир Петров
@@ -113,7 +117,7 @@
               <source srcset="img/препод2-mobile.jpg" media="(max-width: 320px)">
               <source srcset="img/препод2-510.jpg" media="(max-width: 510px)">
               <source srcset="img/препод2-690.jpg" media="(max-width: 690px)">
-              <img src="img/препод2-1100.jpg" alt="foto">
+              <img src="img/препод2-1100.jpg" alt="foto" class="teacher-image-desktop">
             </picture>
             <strong class="teacher-name">
               Денис Сергеев
@@ -127,7 +131,7 @@
               <source srcset="img/препод3-mobile.jpg" media="(max-width: 320px)">
               <source srcset="img/препод3-510.jpg" media="(max-width: 510px)">
               <source srcset="img/препод3-690.jpg" media="(max-width: 690px)">
-              <img src="img/препод3-1100.jpg" alt="foto">
+              <img src="img/препод3-1100.jpg" alt="foto" class="teacher-image-desktop">
             </picture>
             <strong class="teacher-name">
               Михаил Андреев
@@ -141,7 +145,7 @@
               <source srcset="img/препод4-mobile.jpg" media="(max-width: 320px)">
               <source srcset="img/препод4-510.jpg" media="(max-width: 510px)">
               <source srcset="img/препод4-690.jpg" media="(max-width: 690px)">
-              <img src="img/препод4-1100.jpg" alt="foto">
+              <img src="img/препод4-1100.jpg" alt="foto" class="teacher-image-desktop">
             </picture>
             <strong class="teacher-name">
               Константин Дмитриев
@@ -153,15 +157,15 @@
         </ul>
       </div>
     </section>
-    <section class="section-ourcources">
+    <section id="ourcources" class="section-ourcources">
       <div class="container">
         <h2 class="ourcources-title">
           Курсы
         </h2>
         <ul class="cources-list">
           <li class="cources-list-item">
-            <div class="cources-item-image"></div>
-            <div class="cources-item-desc">
+            <div class="cources-item-image image1"></div>
+            <div class="cources-item-desc-block">
               <h3 class="cources-item-title">
                 Cinema 4d для начинающих
               </h3>
@@ -176,8 +180,8 @@
             </div>
           </li>
           <li class="cources-list-item">
-            <div class="cources-item-image"></div>
-            <div class="cources-item-desc">
+            <div class="cources-item-image image2"></div>
+            <div class="cources-item-desc-block">
               <h3 class="cources-item-title">
                 Blender: продвинутый уровень
               </h3>
@@ -190,9 +194,9 @@
               </button>
             </div>
           </li>
-          <li class="cources-list-item">
-            <div class="cources-item-image"></div>
-            <div class="cources-item-desc">
+          <li class="cources-list-item cources-list-item3">
+            <div class="cources-item-image image3"></div>
+            <div class="cources-item-desc-block">
               <h3 class="cources-item-title">
                 Визуализация в 3ds Max
               </h3>
@@ -206,8 +210,8 @@
             </div>
           </li>
           <li class="cources-list-item">
-            <div class="cources-item-image"></div>
-            <div class="cources-item-desc">
+            <div class="cources-item-image image4"></div>
+            <div class="cources-item-desc-block">
               <h3 class="cources-item-title">
                 Скульптинг в ZBrush
               </h3>
